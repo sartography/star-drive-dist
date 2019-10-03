@@ -217,8 +217,8 @@ class DataLoader:
             reader = csv.reader(csvfile, delimiter=csv.excel.delimiter, quotechar=csv.excel.quotechar)
             next(reader, None)  # skip the headers
             for row in reader:
-                user = User(id=row[0], email=row[1], password=row[2],
-                            role=row[3], email_verified=True)
+                user = User(id=row[0], email=row[1], role=row[3], email_verified=True)
+                user.password = row[2]
                 db.session.add(user)
             print("Users loaded.  There are now %i users in the database." % db.session.query(
                 User).count())
@@ -231,7 +231,8 @@ class DataLoader:
             for row in reader:
                 participant = Participant(id=row[0], user_id=row[1], relationship=row[2])
                 db.session.add(participant)
-                self.__increment_id_sequence(Participant)
+                # Users no longer have an id_sequence but are randomly assigned., safe to not increment this.
+                # self.__increment_id_sequence(Participant)
             print("Participants loaded.  There are now %i participants in the database." % db.session.query(
                 Participant).count())
         db.session.commit()
