@@ -11,6 +11,10 @@ cd ../../star-drive-dist/
 cp -r ../star-drive/frontend/dist/star-drive/ frontend/
 cp -r ../star-drive/backend backend
 rm -rf backend/python-env
+rm -rf backend/.idea
+rm -rf backend/instance
+rm -rf backend/tests
+rm -rf star_drive.log
 rm -rf __pycache__/
 git add backend
 git add frontend
