@@ -44,7 +44,7 @@ MAIL_DEFAULT_USER='someaddress@fake.com'
 MAIL_TIMEOUT = 10
 
 GOOGLE_MAPS_API_KEY = "PRODUCTION_API_KEY_GOES_HERE"
-GOOGLE_ANALYTICS_API_KEY = "PRODUCTION_API_KEY_GOES_HERE"
+GOOGLE_ANALYTICS_API_KEY = "UA-145661791-1"
 
 ADMIN_EMAIL = "admin@tester.com"
 PRINCIPAL_INVESTIGATOR_EMAIL = "pi@tester.com"  # Receives some high levl alerts per agreement with InfoSec.
@@ -57,3 +57,6 @@ USER_PASSWORD_REGEX = r"((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8})"
 USER_PASSWORD_INSTRUCTIONS = "Your password must be at least 8 characters long, but we recommend 20 characters. It " \
                              "should include at least one of each of the following: uppercase letters, " \
                              "lowercase letters, numbers, and punctuation characters."
+
+
+
