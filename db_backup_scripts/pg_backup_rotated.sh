@@ -1,4 +1,3 @@
-pg_backup_rotated.sh
 #!/bin/bash
 
 ###########################
