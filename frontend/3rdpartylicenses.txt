@@ -505,7 +505,6 @@ ng2-pdfjs-viewer
 MIT
 
 ngx-device-detector
-MIT
 
 ngx-markdown
 MIT
